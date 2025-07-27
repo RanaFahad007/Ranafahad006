@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Responsive Image Gallery</h1>
+  </header>
+
+  <!-- Category Filters -->
+  <section class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="city">City</button>
+    <button class="filter-btn" data-filter="people">People</button>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section class="gallery" id="gallery">
+    <!-- Sample Images (replace src with your own) -->
+    <div class="gallery-item" data-category="nature">
+      <img src="https://source.unsplash.com/random/600x400?nature,1" alt="Nature 1" />
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://source.unsplash.com/random/600x400?city,1" alt="City 1" />
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="https://source.unsplash.com/random/600x400?people,1" alt="People 1" />
+    </div>
+    <div class="gallery-item" data-category="nature">
+      <img src="https://source.unsplash.com/random/600x400?nature,2" alt="Nature 2" />
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://source.unsplash.com/random/600x400?city,2" alt="City 2" />
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="https://source.unsplash.com/random/600x400?people,2" alt="People 2" />
+    </div>
+    <div class="gallery-item" data-category="nature">
+      <img src="https://source.unsplash.com/random/600x400?nature,3" alt="Nature 3" />
+    </div>
+    <div class="gallery-item" data-category="city">
+      <img src="https://source.unsplash.com/random/600x400?city,3" alt="City 3" />
+    </div>
+    <div class="gallery-item" data-category="people">
+      <img src="https://source.unsplash.com/random/600x400?people,3" alt="People 3" />
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" id="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Expanded Image" />
+    <button class="prev" id="prev-btn">&#10094;</button>
+    <button class="next" id="next-btn">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Image Gallery</h1>
+        <p>Explore our beautiful collection of images</p>
+    </header>
+
+    <main>
+        <!-- Filter Controls -->
+        <div class="filter-container">
+            <h3>Filter by Category</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
+                <button class="filter-btn" data-filter="animals">Animals</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+            </div>
+        </div>
+
+        <!-- Gallery Navigation -->
+        <div class="gallery-navigation">
+            <button class="nav-btn prev-btn" aria-label="Previous images">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn next-btn" aria-label="Next images">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Gallery Container -->
+        <div class="gallery-container">
+            <div class="gallery-grid" id="gallery">
+                <!-- Nature Images -->
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://picsum.photos/400/300?random=1" alt="Beautiful landscape" loading="lazy">
+                    <div class="overlay">
+                        <h4>Mountain Vista</h4>
+                        <p>Breathtaking mountain landscape</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=1">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://picsum.photos/400/300?random=2" alt="Modern building" loading="lazy">
+                    <div class="overlay">
+                        <h4>Modern Architecture</h4>
+                        <p>Contemporary building design</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=2">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animals">
+                    <img src="https://picsum.photos/400/300?random=3" alt="Wildlife photography" loading="lazy">
+                    <div class="overlay">
+                        <h4>Wildlife Wonder</h4>
+                        <p>Amazing wildlife photography</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=3">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://picsum.photos/400/300?random=4" alt="Forest scene" loading="lazy">
+                    <div class="overlay">
+                        <h4>Forest Path</h4>
+                        <p>Serene forest pathway</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=4">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="technology">
+                    <img src="https://picsum.photos/400/300?random=5" alt="Technology concept" loading="lazy">
+                    <div class="overlay">
+                        <h4>Tech Innovation</h4>
+                        <p>Cutting-edge technology</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=5">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://picsum.photos/400/300?random=6" alt="Urban architecture" loading="lazy">
+                    <div class="overlay">
+                        <h4>Urban Design</h4>
+                        <p>City architectural marvel</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=6">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://picsum.photos/400/300?random=7" alt="Ocean view" loading="lazy">
+                    <div class="overlay">
+                        <h4>Ocean Blue</h4>
+                        <p>Tranquil ocean waves</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=7">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animals">
+                    <img src="https://picsum.photos/400/300?random=8" alt="Pet photography" loading="lazy">
+                    <div class="overlay">
+                        <h4>Adorable Companion</h4>
+                        <p>Cute pet portrait</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=8">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="technology">
+                    <img src="https://picsum.photos/400/300?random=9" alt="Digital art" loading="lazy">
+                    <div class="overlay">
+                        <h4>Digital Future</h4>
+                        <p>Modern digital artwork</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=9">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="architecture">
+                    <img src="https://picsum.photos/400/300?random=10" alt="Historic building" loading="lazy">
+                    <div class="overlay">
+                        <h4>Historic Beauty</h4>
+                        <p>Classical architecture</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=10">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="nature">
+                    <img src="https://picsum.photos/400/300?random=11" alt="Desert landscape" loading="lazy">
+                    <div class="overlay">
+                        <h4>Desert Dunes</h4>
+                        <p>Vast desert landscape</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=11">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="animals">
+                    <img src="https://picsum.photos/400/300?random=12" alt="Bird photography" loading="lazy">
+                    <div class="overlay">
+                        <h4>Feathered Friend</h4>
+                        <p>Beautiful bird in flight</p>
+                        <button class="view-btn" data-src="https://picsum.photos/800/600?random=12">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox Modal -->
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-btn" aria-label="Close lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <button class="lightbox-nav prev-lightbox" aria-label="Previous image">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <img src="" alt="" id="lightbox-img">
+                <button class="lightbox-nav next-lightbox" aria-label="Next image">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="lightbox-caption">
+                    <h3 id="lightbox-title"></h3>
+                    <p id="lightbox-description"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Image Gallery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
